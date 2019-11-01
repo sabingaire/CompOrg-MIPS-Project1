@@ -44,3 +44,12 @@ loop_through:									#Loops through all the character of the input string one b
 compute:
 
 		la 	$s4, 1					# Making note that a character has been found.
+		beq 	$a0, 	32, 	space  #Checks if the character is a space
+
+		blt $a0, 48, invalid 		# checks if the number is less than 48. Goes to invalid if true
+
+		ble $a0, 57, valid_num		# Checks if the ASCII of character is less than equal to 58. At this point,
+									# already greater than 48, so it is a valid num in the range 0-9
+
+		blt $a0, 65, invalid 		# Checks if the ASCII of character is less than 65. At this point,
+									# already greater than 58, so if true it is an invalid character
