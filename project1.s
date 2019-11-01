@@ -63,3 +63,9 @@ compute:
 									# already greater than 96, so if true, it is a valid num in the range a-p
 
 		j invalid 					#At this point, already greater than 103, so it is invalid
+
+
+invalid:                  #If the character is invalid add zero to the total sum
+		addi $s1, $s1 , 0
+
+		j loop_through
