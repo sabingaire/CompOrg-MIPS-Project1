@@ -91,3 +91,8 @@ valid_small:
 		addu 	$s1,	$s1, 	$s2				# Adding the value of the character to the result
 
 		j loop_through
+
+space:											#If there is space in the string add zero to the total sum
+		addi $s1, $s1,0
+
+		j loop_through						# return back to the loop\
