@@ -1,6 +1,6 @@
 .data
-	input_message:     	.asciiz "Choose a string: "
-  newline: 			.asciiz "\n"
+	input_message: .asciiz "Choose a string: "
+  newline: .asciiz "\n"
 	Input_user: .space  10
 
 .text
@@ -11,7 +11,7 @@
 
 
 		li $v0, 4 						#Make it ready to print the instruction to console
-		la $a0, input_message  #This will allow the "Choose a string method to print"
+		la $a0, input_message               #This will allow the "Choose a string method to print"
 		syscall
 
 		li $v0, 8		#load 8 in $v0 to read string input from user
@@ -22,9 +22,9 @@
 
 loop_through:									#Loops through all the character of the input string one by one
 
-		lb $a0, ($t0)								#Initializing the address for the character of the string
+		lb $a0, ($t0)					#Initializing the address for the character of the string
 
-		add $t0, $t0, 1								#Incrementing the address
+		add $t0, $t0, 1					#Incrementing the address
 
 		beqz 	$a0, 			end_of_loop			#If "\0" found, end of loop. We know the ascii value of "\0" is zero
 
