@@ -84,3 +84,10 @@ valid_capital:
 		addu 	$s1,	$s1, 	$s2				# Adding the value of the character to the result
 
 		j loop_through
+
+valid_small:
+
+		subu 	$s2, 	$a0, 	87				# Finding the real value of the character by subtracting
+		addu 	$s1,	$s1, 	$s2				# Adding the value of the character to the result
+
+		j loop_through
