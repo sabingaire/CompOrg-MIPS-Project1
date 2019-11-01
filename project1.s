@@ -30,3 +30,9 @@ loop_through:									#Loops through all the character of the input string one b
 
 		beq  	$a0, 	11, 	end_of_loop			#For string less than 10, the last characters
 																			# is "\n", so checking for that
+
+		#So now as we have removed the edge cases like end of line so we move on to compute the result
+		bne $s3, 1, compute
+		bne $s4, 1, compute
+
+		j invalid
