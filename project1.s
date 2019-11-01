@@ -96,3 +96,9 @@ space:											#If there is space in the string add zero to the total sum
 		addi $s1, $s1,0
 
 		j loop_through						# return back to the loop\
+
+end_of_loop: #This will print the sum of the string
+
+			li $v0, 4       #This will make the system ready to print newline
+			la $a0, newline  #Prints new line
+			syscall
