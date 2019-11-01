@@ -53,3 +53,13 @@ compute:
 
 		blt $a0, 65, invalid 		# Checks if the ASCII of character is less than 65. At this point,
 									# already greater than 58, so if true it is an invalid character
+		ble $a0, 80, valid_capital	# Checks if the ASCII of character is less than equal to 80. At this point,
+									# already greater than 65, so if true it is a valid char in the range A - P
+
+		blt $a0, 96, invalid 		# Checks if the ASCII of character is less than 96. At this point,
+									# already greater than 80, so if true it is an invalid character
+
+		ble $a0, 112, valid_small	# Checks if the ASCII of character is less than equal to 112. At this point,
+									# already greater than 96, so if true, it is a valid num in the range a-p
+
+		j invalid 					#At this point, already greater than 103, so it is invalid
