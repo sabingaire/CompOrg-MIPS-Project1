@@ -36,3 +36,11 @@ loop_through:									#Loops through all the character of the input string one b
 		bne $s4, 1, compute
 
 		j invalid
+
+#In my case my ID number is 02859054, as 02859054%11 is zero it will be base 26 number and the last number will be
+ #"p" and 'P' respectively which corresponds to 25 in decimal number respectively. Hence the maximum sum I can get is 02859054
+ #with the combination of P and p.
+
+compute:
+
+		la 	$s4, 1					# Making note that a character has been found.
