@@ -1,3 +1,8 @@
+#Sabin Gaire
+#@02859054
+
+#My I.D number is 02859054. So 02859054%11 =0 will will lead to 26 base numbers
+#The last valid digit is 'p' and "P " will have value 25 respectively.
 .data
 	input_message: .asciiz "Choose a string: "
   newline: .asciiz "\n"
