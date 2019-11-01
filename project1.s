@@ -102,3 +102,7 @@ end_of_loop: #This will print the sum of the string
 			li $v0, 4       #This will make the system ready to print newline
 			la $a0, newline  #Prints new line
 			syscall
+
+			li $v0, 1					# Syscall code for printing out an integer
+			move $a0, $s1 		# Transfer $s1 to $a0 for printing
+			syscall
