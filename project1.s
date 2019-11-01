@@ -9,4 +9,10 @@
 		la $s3, 0					# Boolean for checking if a space is found after a valid character
 		la $s4, 0
 
+
+		li $v0, 4 						#Make it ready to print the instruction to console
+		la $a0, input_message  #This will allow the "Choose a string method to print"
+		syscall
+
+
 	
