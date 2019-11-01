@@ -69,3 +69,11 @@ invalid:                  #If the character is invalid add zero to the total sum
 		addi $s1, $s1 , 0
 
 		j loop_through
+
+
+valid_num:
+
+		subu 	$s2, 	$a0, 	48				# Finding the real value of the character by subtracting
+		addu 	$s1,	$s1, 	$s2 			# Adding the value of the character to the result
+
+		j loop_through
