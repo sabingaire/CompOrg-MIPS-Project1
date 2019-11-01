@@ -106,3 +106,6 @@ end_of_loop: #This will print the sum of the string
 			li $v0, 1					# Syscall code for printing out an integer
 			move $a0, $s1 		# Transfer $s1 to $a0 for printing
 			syscall
+
+			li	$v0, 10					# system call code for exit = 10
+			syscall
